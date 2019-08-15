@@ -27,8 +27,8 @@
         <input type="text" class="form-control" id="name-input">
         </div>
         <div class="form-group">
-        <label for="exampleInputPassword1">Link to Photo Image (Required)</label>
-        <input type="url" name="url" class="form-control" id="exampleInputPassword1">
+        <label for="photoLink">Link to Photo Image (Required)</label>
+        <input type="url" name="url" class="form-control" id="photoLink">
         </div>
         <hr class="my-4">
 
@@ -158,5 +158,41 @@
         </footer>
 </form>
 </div>
+
+<script>
+$(document).ready(() => {
+    $("#submit").on("click", function(event) {
+    event.preventDefault();
+    console.log(1);
+  // Gather user inputs
+var userInput = {
+	name: $('#name-input').val().trim(),
+	photo: $('#photoLink').val().trim(),
+	scores:[
+			$('#q1').val().trim(),
+			$('#q2').val().trim(),
+			$('#q3').val().trim(),
+			$('#q4').val().trim(),
+			$('#q5').val().trim(),
+			$('#q6').val().trim(),
+			$('#q7').val().trim(),
+			$('#q8').val().trim(),
+			$('#q9').val().trim(),
+			$('#q10').val().trim()
+			]
+    };
+    $.post("/api/friendsList").then(function(data) {
+        console.log("add.html", data);
+        alert("Finding a match...");
+    });
+    });
+});
+
+
+
+
+
+
+</script>
 </body>
 </html>
