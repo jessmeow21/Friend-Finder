@@ -3,6 +3,11 @@
   "version": "1.0.0",
   "description": "This full-stack site will take in results from your users' surveys, then compare their answers with those from other users. The app will then display the name and picture of the user with the best overall match.",
   "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
@@ -16,8 +21,5 @@
   "bugs": {
     "url": "https://github.com/jessmeow21/Friend-Finder/issues"
   },
-  "homepage": "https://github.com/jessmeow21/Friend-Finder#readme",
-  "dependencies": {
-    "express": "^4.17.1"
-  }
+  "homepage": "https://github.com/jessmeow21/Friend-Finder#readme"
 }
